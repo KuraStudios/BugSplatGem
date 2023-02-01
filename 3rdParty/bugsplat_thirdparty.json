@@ -1,0 +1,17 @@
+{
+    "name":"BUG_SPLAT",
+    "source":"@GEM@",
+    "description":"Crash Reporting library",
+    "lib_required":"True",
+    "system_includes":["Code/Include","External"],
+    "includes":["Code/Include","External"],
+    "platform": {
+        "win_x64_vs2017": {
+            "sharedlibpath_release": [ "External/BugSplat/BugSplat/x64/Release/" ],
+            "importlibpath_release": [ "External/BugSplat/BugSplat/x64/Release/" ],
+            "import": [ "BugSplat64.lib" ],
+            "shared": [ "BugSplat64.dll" ]
+        }
+    }
+
+}

@@ -1,0 +1,15 @@
+{
+    "none":
+    {
+        "Include":
+        [
+            "Include/BugSplatGem/BugSplatGemBus.h"
+        ],
+        "Source":
+        [
+            "Source/BugSplatGemModule.cpp",
+            "Source/BugSplatGemSystemComponent.cpp",
+            "Source/BugSplatGemSystemComponent.h"
+        ]
+    }
+}

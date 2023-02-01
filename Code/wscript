@@ -1,0 +1,23 @@
+def build(bld):
+    bld.DefineGem(
+        pch                     = "",
+        disable_pch             = True,
+        file_list               = ['bugsplatgem.waf_files'],
+        use_lib                 = ['BUG_SPLAT'],
+        includes                = [bld.Path('Code/CryEngine/CryCommon')],
+        export_internal_3rd_party_libs = True,
+        export_includes         = [ bld.Path('Gems/BugSplatGem/External/BugSplat/inc') ],
+        #export_system_includes = [],
+
+        # BUG_SPLAT turns the crash reporting on.
+        debug_defines = ['BUG_SPLAT'],
+        profile_defines = ['BUG_SPLAT'],
+        performance_defines = ['BUG_SPLAT'],
+
+        # BUG_SPLAT turns the crash reporting on in AzCore
+        debug_export_defines = ['BUG_SPLAT'],
+        profile_export_defines =['BUG_SPLAT'],
+        performance_export_defines = ['BUG_SPLAT']
+
+        #platform_roots = [bld.PlatformRoot('Source/Platform', export_includes=False)]
+    )
